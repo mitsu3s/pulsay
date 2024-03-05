@@ -1,113 +1,165 @@
-import Image from 'next/image'
+"use client";
+import { NextPage } from "next";
+import { useState } from "react";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+interface TableRow {
+  data: string;
+  isChecked: boolean;
+  error: string;
 }
+
+const Home: NextPage = () => {
+  const [tableData, setTableData] = useState<TableRow[]>([
+    { data: "", isChecked: false, error: "" },
+  ]);
+  const [totalResult, setTotalResult] = useState<number>(0);
+
+  const addRow = () =>
+    setTableData([...tableData, { data: "", isChecked: false, error: "" }]);
+
+  const removeRow = (index: number) =>
+    tableData.length > 1 &&
+    setTableData([...tableData.slice(0, index), ...tableData.slice(index + 1)]);
+
+  const toggleCheckbox = (index: number) => {
+    const newData = [...tableData];
+    newData[index] = {
+      ...newData[index],
+      isChecked: !newData[index].isChecked,
+    };
+    setTableData(newData);
+  };
+
+  const handleInputChange = (index: number, value: string) => {
+    const newData = [...tableData];
+    newData[index] = {
+      ...newData[index],
+      data: value,
+      error: validateInput(value),
+    };
+    setTableData(newData);
+  };
+
+  const validateInput = (value: string): string => {
+    const regex = /^\d{2}-\d{2}$/;
+
+    if (!regex.test(value)) return "Invalid format.";
+
+    const [firstNum, secondNum] = value.split("-").map(Number);
+
+    if (isNaN(firstNum) || isNaN(secondNum) || secondNum <= firstNum) {
+      return "Invalid range.";
+    }
+
+    return "";
+  };
+
+  const calculateResult = (
+    firstNum: number,
+    secondNum: number,
+    isChecked: boolean
+  ): number => {
+    const difference = secondNum - firstNum;
+    let adjustedFirstNum = firstNum;
+
+    if (difference < 3) adjustedFirstNum += 0;
+    else if (difference >= 3 && difference < 6) adjustedFirstNum += 0.25;
+    else if (difference >= 6 && difference < 7) adjustedFirstNum += 0.5;
+    else if (difference >= 7 && difference < 9) adjustedFirstNum += 0.75;
+    else if (difference >= 9) adjustedFirstNum += 1;
+
+    let adjustedSecondNum = secondNum;
+
+    if (secondNum > 23) adjustedSecondNum -= 0.5;
+
+    if (secondNum > 22) {
+      const firstDifference = 22 - adjustedFirstNum;
+      const secondDifference = adjustedSecondNum - 22;
+
+      let firstResult = firstDifference * (isChecked ? 1250 : 1150);
+      let secondResult = secondDifference * (isChecked ? 1538 : 1438);
+
+      return firstResult + secondResult;
+    } else {
+      let result =
+        (adjustedSecondNum - adjustedFirstNum) * (isChecked ? 1250 : 1150);
+      return result;
+    }
+  };
+
+  const handleSubmit = () => {
+    let totalResult = tableData.reduce((acc, rowData) => {
+      const [firstNum, secondNum] = rowData.data.split("-").map(Number);
+      if (!isNaN(firstNum) && !isNaN(secondNum)) {
+        return acc + calculateResult(firstNum, secondNum, rowData.isChecked);
+      }
+      return acc;
+    }, 0);
+
+    setTotalResult(totalResult);
+  };
+
+  return (
+    <div className="bg-white min-h-screen text-black flex items-center text-center">
+      <div className="mx-auto p-4">
+        <table className="bg-white border border-gray-300">
+          <thead>
+            <tr>
+              <th className="px-4"></th>
+              <th className="w-52 py-2">Shift Time</th>
+              <th className="w-12"></th>
+              <th className=""></th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableData.map(({ isChecked, data, error }, index) => (
+              <tr key={index}>
+                <td className="text-center">
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={() => toggleCheckbox(index)}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    value={data}
+                    onChange={(e) => handleInputChange(index, e.target.value)}
+                    className="w-full p-2 border border-gray-30"
+                  />
+                </td>
+                <td className="text-center">
+                  <button
+                    onClick={() => removeRow(index)}
+                    className="p-2 bg-red-500 text-white rounded"
+                  >
+                    -
+                  </button>
+                </td>
+                <td className="text-red-500 pr-4">{error}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="text-start">
+          <button
+            onClick={addRow}
+            className="mt-2 p-2 bg-blue-500 text-white rounded"
+          >
+            +
+          </button>
+          <button
+            onClick={handleSubmit}
+            className="mt-2 p-2 ml-2 bg-green-500 text-white rounded"
+          >
+            Calculate
+          </button>
+        </div>
+        <div className="mt-2 text-start">{`Total Result: ${totalResult}`}</div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
