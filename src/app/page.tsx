@@ -76,13 +76,13 @@ const Home: NextPage = () => {
       const firstDifference = 22 - adjustedFirstNum;
       const secondDifference = adjustedSecondNum - 22;
 
-      let firstResult = firstDifference * (isChecked ? 1250 : 1150);
-      let secondResult = secondDifference * (isChecked ? 1538 : 1438);
+      let firstResult = firstDifference * (isChecked ? 1300 : 1200);
+      let secondResult = secondDifference * (isChecked ? 1625 : 1525);
 
       return firstResult + secondResult;
     } else {
       let result =
-        (adjustedSecondNum - adjustedFirstNum) * (isChecked ? 1250 : 1150);
+        (adjustedSecondNum - adjustedFirstNum) * (isChecked ? 1300 : 1200);
       return result;
     }
   };
