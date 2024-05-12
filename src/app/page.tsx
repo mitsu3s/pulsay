@@ -77,7 +77,7 @@ const Home: NextPage = () => {
       const secondDifference = adjustedSecondNum - 22;
 
       let firstResult = firstDifference * (isChecked ? 1300 : 1200);
-      let secondResult = secondDifference * (isChecked ? 1625 : 1525);
+      let secondResult = secondDifference * (isChecked ? 1625 : 1500);
 
       return firstResult + secondResult;
     } else {
